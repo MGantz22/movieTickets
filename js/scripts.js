@@ -1,4 +1,20 @@
 // Business Logic -------
+function SnackBar(soda, candy) {
+  this.soda = soda;
+  this.candy = candy;
+  // this.popcorn = popcorn;
+}
+
+SnackBar.prototype.calculateSnackCost = function() {
+  let snackCost = 1;
+  if (this.soda === "Pepsi") {
+    snackCost += 6.00;
+    }
+  if (this.candy === "Skittles") {
+    snackCost += 5;
+  }
+  return snackCost.toString();
+}
 
 function Ticket(movieName, movieTime, special) {
   this.movieName = movieName;
@@ -11,7 +27,7 @@ Ticket.prototype.selectedTicket = function() {
 }
 
 Ticket.prototype.calculateCost = function() {
-   let cost = 10;
+    let cost = 10;
     if ( this.special === "Matinee") {
         cost += 5.00;
     } else if(this.special === "Youth Upcharge") {
@@ -41,9 +57,8 @@ function handleFormSubmission(event){
     outputTimeSpot.innerText = newTicket.movieTime;
     outputSpecialSpot.innerText = newTicket.special;
     ticketSpot.removeAttribute("class");
-
-    console.log(newTicket.selectedTicket());
-    console.log(newTicket.calculateCost());
+    (newTicket.selectedTicket());
+    (newTicket.calculateCost());
 }
 
 window.addEventListener("load", function() {

@@ -1,26 +1,23 @@
-function SellTicket() {
-  this.currentId = 0;
-}
 
-SellTicket.prototype.assignId = function() {
-  this.currentId +=1;
-  return this.currentId;
-};
+let snack = new SnackBar("Pepsi", "", "");
 
-SellTicket.prototype.calculateCost = function {
-  if(...)
-}
+Define: SnackBar
 
-function Ticket(movieName, movieTime, customerAge) {
-  this.movieName = movieName;
-  this.movieTime = movieTime;
-  this.customerAge = customerAge;
-}
+test: It should return a cost of 7
 
-function takeForm(event) {
-  event.preventDefault()
-  let movieName = document.querySelector("")
-}
+code: new SnackBar("Pepsi")
+Expected output: 7
+
+Define: SnackBar
+
+test: It should return a cost of total snacks.
+
+code: new SnackBar("Pepsi", "Skittles")
+Expected output: 12
+
+
+
+
 
 
 ## Describe: Ticket()
